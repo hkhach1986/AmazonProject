@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-class SignInPage():
+class SignInPage:
     def __init__(self, driver: webdriver.Chrome):
         self.driver = driver
         self.__loginFieldLocator = (By.ID, "ap_email")
