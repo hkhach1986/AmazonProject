@@ -8,6 +8,7 @@ class SignInPage:
         self.__continueButtonLocator = (By.ID, "continue")
         self.__passwordFieldLocator = (By.ID, "ap_password")
         self.__signInButtonLocator = (By.ID, "signInSubmit")
+        self.__signInTitleLocator = (By.XPATH, "//h1[contains(text(), 'Sign in')]")
 
 
     def fill_login_field(self, login):
@@ -25,3 +26,9 @@ class SignInPage:
     def click_to_sign_in_button(self):
         signInButtonElement = self.driver.find_element(*self.__signInButtonLocator)
         signInButtonElement.click()
+
+    def get_sign_in_title_element(self):
+        signInTitleElement = self.driver.find_element(*self.__signInTitleLocator)
+        return signInTitleElement
+
+
